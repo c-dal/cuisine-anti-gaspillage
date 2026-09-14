@@ -10,7 +10,20 @@
 
 Recopiez ce bloc autant de fois que nécessaire.
 
-### TP…
+### TP07
+
+- Réponse à la question « Dans le suivi » du TP :
+  - Si on utilise innerHtml, on risque l'injection de html qui peut mener à des attaques xss avec injection de script
+  - Nous avons utilisé textContent pour éviter cela
+  - textContent affiche tout en texte, et ne parse pas les balises
+  - Il est plus sécurisé de n'accepter aucune balise et de n'accepter que du texte pur
+  - ```<b>gras</b>``` aurait affiché le mot en gras dans la liste
+
+### TP08
+
+- Réponse à la question « Dans le suivi » du TP : `brain.js` ne doit pas utiliser `document` pour bien séparer les responsabilités. De plus, si le serveur envoie tous les fichiers du dossier, les utilisateurs pourraient avoir accès à des fichiers auxquels ils ne devraient pas avoir accès.
+
+### TP...
 
 - J'ai prédit :
 - Nous avons fait :
