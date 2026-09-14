@@ -2,9 +2,9 @@
 
 **Noté. Un fichier par étudiant, écrit avec vos mots.** Une phrase honnête (« j'ai essayé X, j'ai vu Y, je ne comprends pas pourquoi ») rapporte plus qu'une phrase parfaite recopiée.
 
-- Nom :
-- Binôme :
-- Atelier utilisé (le mien, celui du binôme, la reprise) :
+- Nom : CLEMENT Ameylia
+- Binôme : DALLAIS Chloé
+- Atelier utilisé (le mien, celui du binôme, la reprise) : celui du binôme
 
 ## Pour chaque TP abordé
 
