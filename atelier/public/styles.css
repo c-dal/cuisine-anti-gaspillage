@@ -21,3 +21,7 @@ footer {
 #messages {
     overflow-wrap: break-word;
 }
+
+#compteur {
+    align-self: flex-end;
+}

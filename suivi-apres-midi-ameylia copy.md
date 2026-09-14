@@ -10,6 +10,9 @@
 
 Recopiez ce bloc autant de fois que nécessaire.
 
+### TP07 
+- Réponse à la question « Dans le suivi » du TP : Nous avons utilisé textContent pour éviter l'injection HTML et donc éviter des failles de sécurité. TextContent affiche du texte et n'injecte pas du HTML. Utiliser TextContent est plus sécuritaire. Si on avait mis '<b>gras</b>' gras serait afficher en gras dans la liste li.
+
 ### TP…
 
 - J'ai prédit :
