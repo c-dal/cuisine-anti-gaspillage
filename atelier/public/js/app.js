@@ -1,10 +1,12 @@
 import { validateMessage, replyTo } from "./brain.js";
+import { renderMessages } from "./view.js";
 const formulaire = document.querySelector('#chat-form');
 const statut = document.querySelector('#status');
 const versionElt = document.querySelector('#version');
 const champ = document.querySelector('#message');
 const liste = document.querySelector('#messages');
 const longueurTxt = document.querySelector('#longueurAct');
+const historique = [];
 
 
 champ.addEventListener('input',(event)=> {
@@ -16,19 +18,16 @@ champ.addEventListener('input',(event)=> {
 // J1 : interface seule, on bloque l’envoi et on l’explique.
 formulaire?.addEventListener('submit', (event) => {
   event.preventDefault();
-  const texte = champ.value;
+  const texte = champ.value.trim();
   if(validateMessage(texte).ok){
-    const li = document.createElement('li');
-    li.textContent = 'Vous: '+ texte.trim();
-    liste.append(li);
+    historique.push({'role': 'user', 'texte': texte});
+    historique.push({'role': 'assistant', 'texte': replyTo(texte)});
+    renderMessages(historique,liste);
     statut.textContent='';
     champ.value='';
     longueurTxt.textContent = '0';
     champ.focus();
-    const liReponse = document.createElement('li');
-    liReponse.textContent = 'Cuity: '+ replyTo(texte);
-    liste.append(liReponse);
-  } else {
+    } else {
     statut.textContent = 'Le message ne doit pas être vide.';
     champ.value='';
     longueurTxt.textContent = '0';
