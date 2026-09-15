@@ -41,8 +41,8 @@ Recopiez ce bloc autant de fois que nécessaire.
 
 ## Épreuve de l'explication (TP12)
 
-- Ce que je n'ai pas su expliquer :
-- Ce que mon binôme n'a pas su expliquer :
+- Ce que je n'ai pas su expliquer : nous avons compris l'ensemble du code nous avons tout codé à la main sauf le try catch. 
+- Ce que mon binôme n'a pas su expliquer : idem
 
 ## Trois questions
 
