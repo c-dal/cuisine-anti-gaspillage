@@ -8,8 +8,6 @@
 
 ## Pour chaque TP abordé
 
-Recopiez ce bloc autant de fois que nécessaire.
-
 ### TP07
 
 - Réponse à la question « Dans le suivi » du TP :
@@ -36,27 +34,27 @@ Recopiez ce bloc autant de fois que nécessaire.
 - J'ai compris : La différence entre http://localhost:3000 et http://127.0.0.1:3000, elles poitent toutes les deux vers ma machine mais sont considérées comme 2 sites distincts par le serveur, ce qui explique que le localStorage n'est pas partagé entre les deux.
 - Je n'ai pas compris : - 
 
-### TP...
+### TP11
 
-- J'ai prédit :
-- Nous avons fait :
-- J'ai observé :
-- J'ai compris :
-- Je n'ai pas compris :
-- Réponse à la question « Dans le suivi » du TP :
+- Réponse à la question « Dans le suivi » du TP :  
+Le message exact du test rouge : "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal : true !== false"  
+J'ai donc appris qu'un test faux est indiqué, avec la valeur que le test a trouvé et sa comparaison avec la valeur souhaitée.
 
 ## Épreuve de l'explication (TP12)
 
-- Ce que je n'ai pas su expliquer :
-- Ce que mon binôme n'a pas su expliquer :
+- Ce que je n'ai pas su expliquer : Rien, nous avons tout codé à la main, sauf les quelques lignes indiquées dans la partie d'après que nous avons bien compris et su réexpliquer.
+- Ce que mon binôme n'a pas su expliquer : idem
 
 ## Trois questions
 
-1. Pourquoi `textContent` et pas `innerHTML` ?
-2. Pourquoi trois fichiers plutôt qu'un seul ?
-3. Si demain une IA écrit une partie du code, comment saurai-je qu'il est correct ?
+1. Pourquoi `textContent` et pas `innerHTML` ?  
+Pour éviter l'injection HTML car innerHTML parse les balises, donc si on met `<b>`, le texte sera en gras, si on met `<script>` il est facile d'avoir un script malicieux.
+2. Pourquoi trois fichiers plutôt qu'un seul ?  
+Trois fichiers plutôt qu'un seul pour séparer les responsabilités, et s'assurer que tous les fichiers ne sont pas à disposition de l'utilisateur s'ils ne lui sont pas destinés.
+3. Si demain une IA écrit une partie du code, comment saurai-je qu'il est correct ?  
+Si une IA écrit une partie du code, je saurai qu'il est correct en comprenant ligne par ligne ce qu'elle a écrit, et en vérifiant par des tests que le code est fonctionnel.
 
 ## Aides utilisées
 
-- Indices, aide-mémoire, voisins :
-- Ce que j'ai demandé à une IA, et comment j'ai vérifié sa réponse :
+- Indices, aide-mémoire, voisins : Nous avons travaillé à deux, et cherché de temps en temps certaines notions spécifiques sur internet (la propriété localStorage, certaines syntaxes spécifiques (try catch, append, push))
+- Ce que j'ai demandé à une IA, et comment j'ai vérifié sa réponse : On lui a demandé de l'aide pour corriger notre try catch de app.js pour l'enregistrement dans localStorage, c'est quelque chose qui était nouveau pour nous et il y avait des erreurs. L'IA a donc pu nous corriger, et en relisant ligne par ligne nous avons vu que ça correspondait aux consignes, et que nous comprenions chaque ligne de code. En testant, nous avons constaté que c'était fonctionnel.
