@@ -26,6 +26,10 @@ Recopiez ce bloc autant de fois que nécessaire.
 - J'ai observé : Nous avons observé que la prédiction était bonne.
 - J'ai compris : J'ai compris que le stockage de la conversation était lié au server et donc à l'adresse http://127.0.0.1:3000/
 
+### TP11
+
+-Réponse à la question : AssertionError [ERR_ASSERTION]: Expected values to be strictly equal: true !== false. J'ai donc appris qu'un test faux est en contradiction avec la valeur normal du test.
+
 ### TP…
 
 - J'ai prédit :
@@ -42,11 +46,11 @@ Recopiez ce bloc autant de fois que nécessaire.
 
 ## Trois questions
 
-1. Pourquoi `textContent` et pas `innerHTML` ?
-2. Pourquoi trois fichiers plutôt qu'un seul ?
-3. Si demain une IA écrit une partie du code, comment saurai-je qu'il est correct ?
+1. Pourquoi `textContent` et pas `innerHTML` ? Car innerHTML réalise une injection HTML et est donc une possible faille de sécurité, un utilisateur n'est pas sensé pouvoir injecté du HTML. Ainsi on utilise textContent pour modifier juste le texte. 
+2. Pourquoi trois fichiers plutôt qu'un seul ? Trois fichiers plutôt qu'un seul permettent le respect des responsabilités et donc de ne pas tout mélanger au sein d'un seul fichier. 
+3. Si demain une IA écrit une partie du code, comment saurai-je qu'il est correct ? Si demain une IA écrit une partie du code, je saurai qu'il est correct en vérifiant ligne par ligne et en analysant son injection dans mon code déjà existante. 
 
 ## Aides utilisées
 
-- Indices, aide-mémoire, voisins :
-- Ce que j'ai demandé à une IA, et comment j'ai vérifié sa réponse :
+- Indices, aide-mémoire, voisins : Nous avons travaillé en binôme et rechercher dans la librairie du langage utilisé. 
+- Ce que j'ai demandé à une IA, et comment j'ai vérifié sa réponse : On lui à demandé de l'aide pour la correction du try catch du localStorage, nous avons vérifié sa réponse en comprenant les lignes à modifié et les erreurs que nous avions fait. 
