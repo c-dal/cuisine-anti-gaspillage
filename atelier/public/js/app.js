@@ -1,15 +1,31 @@
 import { validateMessage, replyTo } from "./brain.js";
 import { renderMessages } from "./view.js";
+
 const formulaire = document.querySelector('#chat-form');
 const statut = document.querySelector('#status');
 const versionElt = document.querySelector('#version');
 const champ = document.querySelector('#message');
 const liste = document.querySelector('#messages');
 const longueurTxt = document.querySelector('#longueurAct');
+const effacer = document.querySelector('#effacer');
 const historique = [];
 
+try {
+  const memoire = localStorage.getItem('capweb.historique');
 
-champ.addEventListener('input',(event)=> {
+  if (memoire) {
+    const messages = JSON.parse(memoire);
+
+    historique.push(...messages);
+    renderMessages(historique, liste);
+  }
+} catch (error) {
+  historique.length = 0;
+  statut.textContent =
+    'La conversation enregistrée est abîmée. Une nouvelle conversation a été créée.';
+}
+
+champ?.addEventListener('input', (event) => {
   const longueur = champ.value.length;
   event.preventDefault();
   longueurTxt.textContent = longueur;
@@ -19,20 +35,28 @@ champ.addEventListener('input',(event)=> {
 formulaire?.addEventListener('submit', (event) => {
   event.preventDefault();
   const texte = champ.value.trim();
-  if(validateMessage(texte).ok){
-    historique.push({'role': 'user', 'texte': texte});
-    historique.push({'role': 'assistant', 'texte': replyTo(texte)});
-    renderMessages(historique,liste);
-    statut.textContent='';
-    champ.value='';
+  if (validateMessage(texte).ok) {
+    historique.push({ 'role': 'user', 'texte': texte });
+    historique.push({ 'role': 'assistant', 'texte': replyTo(texte) });
+    localStorage.setItem('capweb.historique', JSON.stringify(historique));
+    renderMessages(historique, liste);
+    statut.textContent = '';
+    champ.value = '';
     longueurTxt.textContent = '0';
     champ.focus();
-    } else {
+  } else {
     statut.textContent = 'Le message ne doit pas être vide.';
-    champ.value='';
+    champ.value = '';
     longueurTxt.textContent = '0';
     champ.focus();
   }
+});
+
+effacer?.addEventListener('click', (event) => {
+  event.preventDefault();
+  historique.length = 0;
+  localStorage.removeItem('capweb.historique');
+  renderMessages(historique, liste);
 });
 
 // Version du serveur local, échec discret si indisponible.
@@ -43,4 +67,4 @@ fetch('/version.json', { headers: { accept: 'application/json' } })
       versionElt.textContent = `version ${donnees.version}`;
     }
   })
-  .catch(() => {});
+  .catch(() => { });

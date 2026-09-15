@@ -23,6 +23,19 @@ Recopiez ce bloc autant de fois que nécessaire.
 
 - Réponse à la question « Dans le suivi » du TP : `brain.js` ne doit pas utiliser `document` pour bien séparer les responsabilités. De plus, si le serveur envoie tous les fichiers du dossier, les utilisateurs pourraient avoir accès à des fichiers auxquels ils ne devraient pas avoir accès.
 
+### TP09
+
+- J'ai compris : J'ai compris qu'il est important de séparer les responsabilités. Le fichier qui fait les traitements n'est pas celui qui doit afficher le rendu.
+- Réponse à la question « Dans le suivi » du TP : `brain.js` sert à faire tous les traitements nécessaires des messages, c'est le fichier qui "réfléchit", comme son nom l'indique. Le fichier `view.js` sert à l'affichage, il ne fait pas de traitement. Quant au fichier `app.js`, c'est le côté applicatif qui fait les appels aux fonctions nécessaires.
+
+### TP10
+
+- J'ai prédit : La conversation apparait dans un autre onglet car localStorage est lié à l'adresse du site sur notre machine, mais ne s'affichera pas en navigation privée car il n'a pas accès au local storage. Sur http://localhost:3000 la conversation ne va pas s'afficher, le site est considéré comme différent par le serveur.
+- Nous avons fait : nous avons testé l'ouverture dans un nouvel onglet, dans un onglet de navigation privée, et sur une adresse différente.
+- J'ai observé : Les prédictions étaient correctes.
+- J'ai compris : La différence entre http://localhost:3000 et http://127.0.0.1:3000, elles poitent toutes les deux vers ma machine mais sont considérées comme 2 sites distincts par le serveur, ce qui explique que le localStorage n'est pas partagé entre les deux.
+- Je n'ai pas compris : - 
+
 ### TP...
 
 - J'ai prédit :

@@ -1,6 +1,6 @@
 export function renderMessages(messages, container){
-    let lignes = [];
-    for(let i in messages){
+    const lignes = [];
+    for(const i in messages){
         const message = messages[i];
         const user = message['role'] === 'user'?'Vous: ':'Cuity: ';
         const li = document.createElement('li');
