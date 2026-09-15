@@ -19,6 +19,13 @@ Recopiez ce bloc autant de fois que nécessaire.
 ### TP09 
 - Réponse à la question « Dans le suivi » du TP : Le fichier brain.js s'occupe des réponses apporter par le chat bot c'est celui qui réfléchi. Le fichier view.js s'occupe de l'ajout des réponses et question envoyé par l'utilisateur et par l'assistant. Le fichier app.js sert d'applicatifs aux autres fichiers. 
 
+### TP10
+
+- J'ai prédit : La conversation apparaitra sur un autre onglet car localStorage est lié à l'addresse du site, mais ne s'affichera pas sur la navigation privée. Elle ne s'affichera pas sur "localhost : 3000" car le site est différent du site du server. 
+- Nous avons fait : Nous avons testé d'ouvrir un nouvel onglet de l'adresse http://127.0.0.1:3000/ en public et en privée, puis nous avons testé l'adresse localhost : 3000.
+- J'ai observé : Nous avons observé que la prédiction était bonne.
+- J'ai compris : J'ai compris que le stockage de la conversation était lié au server et donc à l'adresse http://127.0.0.1:3000/
+
 ### TP…
 
 - J'ai prédit :
